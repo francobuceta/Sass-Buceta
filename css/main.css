@@ -1,0 +1,504 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+h1,
+h2 {
+  font-family: 'Kalam', cursive; }
+
+/* Home (index.html)*/
+/*Grid Contenedor*/
+.gridContainer {
+  display: grid;
+  grid-template-columns: 0.3fr 2.7fr 0.3fr;
+  grid-template-rows: 0.2fr 2.3fr 0.5fr 0.6fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "headerContainer headerContainer headerContainer" ". mainContainer ." ". botonSeccion ." "footerContainer footerContainer footerContainer";
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto; }
+
+/* Header */
+.headerContainer {
+  grid-area: headerContainer;
+  background-color: #fefbe7; }
+  .headerContainer .navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; }
+    .headerContainer .navBar .logo {
+      width: 100%;
+      height: 100px;
+      margin-left: 70px;
+      margin-bottom: -3px; }
+    .headerContainer .navBar .estiloLista {
+      list-style: none;
+      padding: 0;
+      display: flex; }
+
+nav ul li a {
+  text-decoration: none;
+  background-color: #dae5d0;
+  padding: 10px;
+  display: block;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25px; }
+  nav ul li a:hover {
+    background-color: #a0bcc2; }
+
+header label {
+  display: none;
+  width: 30px;
+  height: 30px;
+  padding: 50px;
+  border-right: 1px solid #fff; }
+  header label:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3); }
+
+header #botonMenu {
+  display: none; }
+
+/* Main */
+.mainContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1.8fr 0.2fr 2fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "imgPresentacion imgPresentacion imgPresentacion" ". titulo ." "card1 card2 card3";
+  grid-area: mainContainer;
+  background-color: #dae5d0; }
+  .mainContainer .imgPresentacion {
+    grid-area: imgPresentacion;
+    position: relative;
+    overflow: hidden; }
+    .mainContainer .imgPresentacion .tituloEnImagen {
+      position: absolute;
+      top: 38%;
+      left: 50%;
+      background-color: #a0bcc2;
+      border-radius: 40px;
+      transform: translate(-50%, -50%); }
+    .mainContainer .imgPresentacion .titulo2EnImagen {
+      position: absolute;
+      top: 47%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #a0bcc2;
+      border-radius: 40px; }
+    .mainContainer .imgPresentacion .fotoPresentacion {
+      height: 400px;
+      width: 100%; }
+  .mainContainer .titulo {
+    grid-area: titulo;
+    text-align: center; }
+  .mainContainer .card1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "pic pic pic" "pic pic pic" "parrafo parrafo parrafo";
+    grid-area: card1; }
+    .mainContainer .card1 .pic {
+      grid-area: pic; }
+      .mainContainer .card1 .pic .imgFixe {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        height: 350px; }
+    .mainContainer .card1 .parrafo {
+      grid-area: parrafo; }
+  .mainContainer .card2 {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "pic2 pic2 pic2" "pic2 pic2 pic2" "parrafo2 parrafo2 parrafo2";
+    grid-area: card2; }
+    .mainContainer .card2 .pic2 {
+      grid-area: pic2; }
+      .mainContainer .card2 .pic2 .imgFixe {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        height: 350px; }
+    .mainContainer .card2 .parrafo2 {
+      grid-area: parrafo2; }
+  .mainContainer .card3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "pic3 pic3 pic3" "pic3 pic3 pic3" "parrafo3 parrafo3 parrafo3";
+    grid-area: card3; }
+    .mainContainer .card3 .pic3 {
+      grid-area: pic3; }
+      .mainContainer .card3 .pic3 .imgFixe {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        height: 350px; }
+    .mainContainer .card3 .parrafo3 {
+      grid-area: parrafo3; }
+
+/* Seccion Boton */
+.botonSeccion {
+  grid-area: botonSeccion;
+  background-color: #dae5d0; }
+  .botonSeccion .flex-boton {
+    display: flex;
+    justify-content: center; }
+    .botonSeccion .flex-boton .boton {
+      background-color: #376de3;
+      width: 100px;
+      height: 50px;
+      border-radius: 15px; }
+
+/* Footer */
+.footerContainer {
+  grid-area: footerContainer;
+  background-color: #fefbe7;
+  padding: 6em;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  .footerContainer .separador {
+    margin: 5px;
+    margin-right: auto; }
+  .footerContainer .listaNavegacion {
+    flex-direction: column;
+    margin: 3px; }
+  .footerContainer .wpFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex; }
+  footer ul li a {
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px; }
+    footer ul li a:hover {
+      background-color: #a0bcc2; }
+
+/* Media Queris */
+/* Home */
+/* Tablet */
+@media (max-width: 1199px) {
+  .mainContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.2fr 0.2fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "imgPresentacion imgPresentacion imgPresentacion" ". titulo ." ". card1 ." ". card2 ." ". card3 .";
+    grid-area: mainContainer;
+    background-color: #dae5d0; }
+  .logo {
+    width: 100%;
+    height: 100px;
+    margin-right: -50px;
+    margin-bottom: -3px; } }
+
+/* Mobile */
+@media (max-width: 767px) {
+  header label {
+    display: block; }
+  .navBar {
+    position: absolute;
+    margin-left: 100%;
+    z-index: 100; }
+  .navBar .estiloLista {
+    flex-direction: column; }
+  .navBar li {
+    border-top: 1px solid #fff; }
+  #botonMenu:checked ~ .navBar {
+    margin: 0; }
+  .navBar img {
+    display: none; }
+  .tituloEnImagen {
+    top: 30%;
+    left: 48%; } }
+
+/* Servicios (servicios.html)*/
+.gridContainerServicio {
+  display: grid;
+  grid-template-columns: 0.3fr 2.7fr 0.3fr;
+  grid-template-rows: 0.2fr 2.3fr 0.5fr 0.6fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "headerContainer headerContainer headerContainer" ". mainServicio ." ". botonSeccion ." "footerContainer footerContainer footerContainer";
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto; }
+  .gridContainerServicio .mainServicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1.2fr 0.2fr 0.3fr 0.3fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "imgServicio imgServicio imgServicio imgServicio" ". tituloServicio tituloServicio ." "card1Ser card1Ser card2Ser card2Ser" "card3Ser card3Ser card4Ser card4Ser";
+    grid-area: mainServicio;
+    background-color: #dae5d0; }
+    .gridContainerServicio .mainServicio .imgServicio {
+      grid-area: imgServicio; }
+      .gridContainerServicio .mainServicio .imgServicio .tituloEnImagen {
+        position: absolute;
+        top: 38%;
+        left: 50%;
+        background-color: #a0bcc2;
+        border-radius: 40px;
+        transform: translate(-50%, -50%); }
+      .gridContainerServicio .mainServicio .imgServicio .fotoPresentacion {
+        height: 400px;
+        width: 100%; }
+    .gridContainerServicio .mainServicio .tituloServicio {
+      grid-area: tituloServicio;
+      text-align: center;
+      padding: 50px;
+      font-family: 'Kalam', cursive;
+      font-size: 20px; }
+    .gridContainerServicio .mainServicio .card1Ser {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1.6fr 0.4fr;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas: "fotoSer fotoSer fotoSer" "fotoSer fotoSer fotoSer" "parrafo1Ser parrafo1Ser parrafo1Ser";
+      grid-area: card1Ser;
+      justify-items: center; }
+      .gridContainerServicio .mainServicio .card1Ser .fotoSer {
+        grid-area: fotoSer; }
+      .gridContainerServicio .mainServicio .card1Ser .parrafo1Ser {
+        grid-area: parrafo1Ser; }
+    .gridContainerServicio .mainServicio .card2Ser {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1.6fr 0.4fr;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas: "foto2Ser foto2Ser foto2Ser" "foto2Ser foto2Ser foto2Ser" "parrafo2Ser parrafo2Ser parrafo2Ser";
+      grid-area: card2Ser;
+      justify-items: center; }
+      .gridContainerServicio .mainServicio .card2Ser .foto2Ser {
+        grid-area: foto2Ser; }
+      .gridContainerServicio .mainServicio .card2Ser .parrafo2Ser {
+        grid-area: parrafo2Ser; }
+    .gridContainerServicio .mainServicio .card3Ser {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1.6fr 0.4fr;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas: "foto3Ser foto3Ser foto3Ser" "foto3Ser foto3Ser foto3Ser" "parrafo3Ser parrafo3Ser parrafo3Ser";
+      grid-area: card3Ser;
+      justify-items: center; }
+      .gridContainerServicio .mainServicio .card3Ser .foto3Ser {
+        grid-area: foto3Ser; }
+      .gridContainerServicio .mainServicio .card3Ser .parrafo3Ser {
+        grid-area: parrafo3Ser; }
+    .gridContainerServicio .mainServicio .card4Ser {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1.6fr 0.4fr;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas: "foto4Ser foto4Ser foto4Ser" "foto4Ser foto4Ser foto4Ser" "parrafo4Ser parrafo4Ser parrafo4Ser";
+      grid-area: card4Ser;
+      justify-items: center; }
+      .gridContainerServicio .mainServicio .card4Ser .foto4Ser {
+        grid-area: foto4Ser; }
+      .gridContainerServicio .mainServicio .card4Ser .parrafo4Ser {
+        grid-area: parrafo4Ser; }
+
+/* Media Queries*/
+/* Tablet */
+@media (max-width: 1199px) {
+  .mainServicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1.9fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "imgServicio imgServicio imgServicio imgServicio" ". tituloServicio tituloServicio ." ". card1Ser card1Ser ."  ". card2Ser card2Ser ." ". card3Ser card3Ser ."  ". card4Ser card4Ser .";
+    grid-area: mainServicio;
+    background-color: #dae5d0; } }
+
+/* Portfolio (portfolio.html) */
+.gridContainerPortfolio {
+  display: grid;
+  grid-template-columns: 0.3fr 2.7fr 0.3fr;
+  grid-template-rows: 0.2fr 2.3fr 0.5fr 0.6fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "headerContainer headerContainer headerContainer" ". mainPortfolio ." ". botonSeccion ." "footerContainer footerContainer footerContainer";
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto; }
+  .gridContainerPortfolio .mainPortfolio {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1.8fr 0.2fr 1.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "imgPortfolio imgPortfolio imgPortfolio" "tituloPortfolio tituloPortfolio tituloPortfolio" "carrusel carrusel carrusel";
+    grid-area: mainPortfolio;
+    background-color: #dae5d0; }
+    .gridContainerPortfolio .mainPortfolio .imgPortfolio {
+      grid-area: imgPortfolio; }
+      .gridContainerPortfolio .mainPortfolio .imgPortfolio .tituloEnImagen {
+        position: absolute;
+        top: 38%;
+        left: 50%;
+        background-color: #a0bcc2;
+        border-radius: 40px;
+        transform: translate(-50%, -50%); }
+      .gridContainerPortfolio .mainPortfolio .imgPortfolio .fotoPresentacion {
+        height: 400px;
+        width: 100%; }
+    .gridContainerPortfolio .mainPortfolio .tituloPortfolio {
+      grid-area: tituloPortfolio;
+      text-align: center;
+      padding: 50px;
+      font-family: 'Kalam', cursive;
+      font-size: 20px; }
+    .gridContainerPortfolio .mainPortfolio .carrusel {
+      grid-area: carrusel; }
+      .gridContainerPortfolio .mainPortfolio .carrusel .fotoPresentacion {
+        height: 400px;
+        width: 100%; }
+
+/* Nosotros (nosotros.html)*/
+.gridContainerNosotros {
+  display: grid;
+  grid-template-columns: 0.3fr 2.7fr 0.3fr;
+  grid-template-rows: 0.2fr 2.3fr 0.5fr 0.6fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "headerContainer headerContainer headerContainer" ". mainNosotros ." ". botonSeccion ." "footerContainer footerContainer footerContainer";
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto; }
+  .gridContainerNosotros .mainNosotros {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 8px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "imgNosotros imgNosotros imgNosotros" "conocenos conocenos ." "icono1 icono2 icono3";
+    grid-area: mainNosotros;
+    background-color: #dae5d0;
+    justify-items: center; }
+    .gridContainerNosotros .mainNosotros .imgNosotros {
+      grid-area: imgNosotros; }
+      .gridContainerNosotros .mainNosotros .imgNosotros .tituloEnImagen {
+        position: absolute;
+        top: 38%;
+        left: 50%;
+        background-color: #a0bcc2;
+        border-radius: 40px;
+        transform: translate(-50%, -50%); }
+      .gridContainerNosotros .mainNosotros .imgNosotros .fotoPresentacion {
+        height: 400px;
+        width: 100%; }
+    .gridContainerNosotros .mainNosotros .conocenos {
+      grid-area: conocenos;
+      display: flex;
+      width: 100%; }
+    .gridContainerNosotros .mainNosotros .icono1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 0.25fr 0.25fr 0.25fr;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas: "fotoIcono fotoIcono fotoIcono" "fotoIcono fotoIcono fotoIcono" "textoIcono1 textoIcono1 textoIcono1";
+      grid-area: icono1;
+      justify-items: center; }
+      .gridContainerNosotros .mainNosotros .icono1 .fotoIcono {
+        grid-area: fotoIcono; }
+      .gridContainerNosotros .mainNosotros .icono1 .textoIcono1 {
+        grid-area: textoIcono1; }
+    .gridContainerNosotros .mainNosotros .icono2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 0.25fr 0.25fr 0.25fr;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas: "fotoIcono2 fotoIcono2 fotoIcono2" "fotoIcono2 fotoIcono2 fotoIcono2" "textoIcono2 textoIcono2 textoIcono2";
+      grid-area: icono2;
+      justify-items: center; }
+      .gridContainerNosotros .mainNosotros .icono2 .fotoIcono2 {
+        grid-area: fotoIcono2; }
+      .gridContainerNosotros .mainNosotros .icono2 .textoIcono2 {
+        grid-area: textoIcono2; }
+    .gridContainerNosotros .mainNosotros .icono3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 0.25fr 0.25fr 0.25fr;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas: "fotoIcono3 fotoIcono3 fotoIcono3" "fotoIcono3 fotoIcono3 fotoIcono3" "textoIcono3 textoIcono3 textoIcono3";
+      grid-area: icono3;
+      justify-items: center; }
+      .gridContainerNosotros .mainNosotros .icono3 .fotoIcono3 {
+        grid-area: fotoIcono3; }
+      .gridContainerNosotros .mainNosotros .icono3 .textoIcono3 {
+        grid-area: textoIcono3; }
+
+/* Media Queries */
+/* Mobile */
+@media (max-width: 767px) {
+  .mainNosotros {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "imgNosotros imgNosotros imgNosotros" "conocenos conocenos ." ". icono1 ."  ". icono2 ." ". icono3 .";
+    grid-area: mainNosotros;
+    background-color: #dae5d0;
+    justify-items: center; } }
+
+/* Contacto (contacto.html) */
+.gridContainerContacto {
+  display: grid;
+  grid-template-columns: 0.3fr 2.7fr 0.3fr;
+  grid-template-rows: 0.2fr 2.3fr 0.5fr 0.6fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "headerContainer headerContainer headerContainer" ". mainContacto ." ". botonSeccion ." "footerContainer footerContainer footerContainer";
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto; }
+  .gridContainerContacto .mainContacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 1fr;
+    gap: 8px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "imgContacto" "formulario";
+    grid-area: mainContacto;
+    background-color: #dae5d0;
+    justify-items: center; }
+    .gridContainerContacto .mainContacto .imgContacto {
+      grid-area: imgContacto; }
+      .gridContainerContacto .mainContacto .imgContacto .tituloEnImagen {
+        position: absolute;
+        top: 38%;
+        left: 50%;
+        background-color: #a0bcc2;
+        border-radius: 40px;
+        transform: translate(-50%, -50%); }
+      .gridContainerContacto .mainContacto .imgContacto .fotoPresentacion {
+        height: 400px;
+        width: 100%; }
+    .gridContainerContacto .mainContacto .formulario {
+      grid-area: formulario; }

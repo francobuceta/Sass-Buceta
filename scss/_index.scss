@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, 
+h2 {
+    font-family: 'Kalam', cursive;
+}
+
+/* Home (index.html)*/
+/*Grid Contenedor*/
+.gridContainer {  
+    display: grid;
+    grid-template-columns: 0.3fr 2.7fr 0.3fr;
+    grid-template-rows: 0.2fr 2.3fr 0.5fr 0.6fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "headerContainer headerContainer headerContainer"
+    ". mainContainer ."
+    ". botonSeccion ."
+    "footerContainer footerContainer footerContainer";
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+
+/* Header */
+
+.headerContainer { 
+    grid-area: headerContainer;
+    background-color: $color-fondo;
+    .navBar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        .logo {
+            width: 100%;
+            height: 100px;
+            margin-left: 70px;
+            margin-bottom: -3px;
+        }
+        .estiloLista {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+    }
+}
+
+nav {
+    ul {
+        li {
+            a {
+                text-decoration: none;
+                background-color: $color-fondo2;
+                padding: 10px;
+                display: block;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 25px;
+                    &:hover {
+                        background-color: $color-titulo;
+                    }
+            }
+        }
+    }
+}
+
+header {
+    label {
+        display: none;
+        width: 30px;
+        height: 30px;
+        padding: 50px;
+        border-right: 1px solid #fff;
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(0,0,0,0.3);
+        }
+    }
+    #botonMenu {
+        display: none;
+    }
+}        
+
+/* Main */
+
+.mainContainer {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1.8fr 0.2fr 2fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "imgPresentacion imgPresentacion imgPresentacion"
+    ". titulo ."
+    "card1 card2 card3";
+    grid-area: mainContainer;
+    background-color: $color-fondo2;
+    .imgPresentacion { 
+        grid-area: imgPresentacion; 
+        position: relative;
+        overflow: hidden;
+        .tituloEnImagen {
+            position: absolute;
+            top: 38%;
+            left: 50%;
+            background-color: $color-titulo;
+            border-radius: 40px;
+            transform: translate(-50%, -50%);
+        }
+        
+        .titulo2EnImagen {
+            position: absolute;
+            top: 47%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $color-titulo;
+            border-radius: 40px;
+        }
+        .fotoPresentacion {
+            height: 400px;
+            width: 100%;
+        }
+    }
+    .titulo { 
+        grid-area: titulo; 
+        text-align: center;
+    }
+    .card1 {  
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "pic pic pic"
+        "pic pic pic"
+        "parrafo parrafo parrafo";
+        grid-area: card1;
+        .pic { 
+            grid-area: pic; 
+            .imgFixe {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 90%;
+                height: 350px;
+            }
+        }
+        .parrafo { 
+            grid-area: parrafo; 
+        }
+    }
+    .card2 {  display: grid;
+        grid-template-columns: 0.9fr 1.1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "pic2 pic2 pic2"
+        "pic2 pic2 pic2"
+        "parrafo2 parrafo2 parrafo2";
+        grid-area: card2;
+        .pic2 { 
+            grid-area: pic2; 
+            .imgFixe {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 90%;
+                height: 350px;
+            }
+        }
+        .parrafo2 { 
+            grid-area: parrafo2; 
+        }
+    }
+    .card3 {  
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "pic3 pic3 pic3"
+        "pic3 pic3 pic3"
+        "parrafo3 parrafo3 parrafo3";
+        grid-area: card3;
+        .pic3 { 
+            grid-area: pic3; 
+            .imgFixe {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 90%;
+                height: 350px;
+            }
+        }
+        .parrafo3 { 
+            grid-area: parrafo3; 
+        }
+    }
+}
+
+/* Seccion Boton */
+
+.botonSeccion {
+    grid-area: botonSeccion;
+    background-color: $color-fondo2;
+    .flex-boton {
+        display: flex;
+        justify-content: center;
+        .boton {
+            background-color: rgb(55, 109, 227);
+            width: 100px;
+            height: 50px;
+            border-radius: 15px;
+        }
+    }
+}
+
+/* Footer */
+
+.footerContainer { 
+    grid-area: footerContainer; 
+    background-color: $color-fondo;
+    padding: 6em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .separador {
+        margin: 5px;
+        margin-right: auto;
+    }
+    .listaNavegacion {
+        flex-direction: column;
+        margin: 3px;
+    }
+    .wpFlex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+footer {
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            li {
+                a {
+                    text-decoration: none;
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    font-size: 20px;
+                    &:hover {
+                        background-color: $color-titulo;
+                    }
+                }
+            }
+        }       
+}
+
+/* Media Queris */
+/* Home */
+
+/* Tablet */
+@media (max-width: 1199px) {
+    .mainContainer {  
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 0.2fr 0.2fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "imgPresentacion imgPresentacion imgPresentacion"
+        ". titulo ."
+        ". card1 ."
+        ". card2 ."
+        ". card3 .";
+        grid-area: mainContainer;
+        background-color: $color-fondo2;
+    }
+
+    .logo {
+        width: 100%;
+        height: 100px;
+        margin-right: -50px;
+        margin-bottom: -3px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    
+    header label {
+        display: block;
+    }
+
+    .navBar {
+        position: absolute;
+        margin-left: 100%;
+        z-index: 100;
+    }
+    
+    .navBar .estiloLista {
+        flex-direction: column;
+    }
+
+    .navBar li {
+        border-top: 1px solid #fff;
+    }
+
+    #botonMenu:checked ~ .navBar {
+        margin: 0;
+    }
+
+    .navBar img {
+        display: none;
+    }
+
+    .tituloEnImagen {
+        top: 30%;
+        left: 48%;
+    }
+}

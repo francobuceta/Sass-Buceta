@@ -1,0 +1,128 @@
+/* Nosotros (nosotros.html)*/
+
+.gridContainerNosotros {  
+    display: grid;
+    grid-template-columns: 0.3fr 2.7fr 0.3fr;
+    grid-template-rows: 0.2fr 2.3fr 0.5fr 0.6fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "headerContainer headerContainer headerContainer"
+    ". mainNosotros ."
+    ". botonSeccion ."
+    "footerContainer footerContainer footerContainer";
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    .mainNosotros {  
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 8px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "imgNosotros imgNosotros imgNosotros"
+        "conocenos conocenos ."
+        "icono1 icono2 icono3";
+        grid-area: mainNosotros;
+        background-color: $color-fondo2;
+        justify-items: center;
+        .imgNosotros { 
+            grid-area: imgNosotros; 
+            .tituloEnImagen {
+                position: absolute;
+                top: 38%;
+                left: 50%;
+                background-color: $color-titulo;
+                border-radius: 40px;
+                transform: translate(-50%, -50%);
+            }
+            .fotoPresentacion {
+                height: 400px;
+                width: 100%;
+            }
+        }
+        .conocenos { 
+            grid-area: conocenos; 
+            display: flex;
+            width: 100%;
+        }
+        .icono1 {  
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 0.25fr 0.25fr 0.25fr;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas:
+            "fotoIcono fotoIcono fotoIcono"
+            "fotoIcono fotoIcono fotoIcono"
+            "textoIcono1 textoIcono1 textoIcono1";
+            grid-area: icono1;
+            justify-items: center;
+            .fotoIcono { 
+                grid-area: fotoIcono; 
+            }
+            .textoIcono1 { 
+                grid-area: textoIcono1; 
+            }
+        }
+        .icono2 {  
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 0.25fr 0.25fr 0.25fr;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas:
+            "fotoIcono2 fotoIcono2 fotoIcono2"
+            "fotoIcono2 fotoIcono2 fotoIcono2"
+            "textoIcono2 textoIcono2 textoIcono2";
+            grid-area: icono2;
+            justify-items: center;
+            .fotoIcono2 { 
+                grid-area: fotoIcono2; 
+            }
+            .textoIcono2 { 
+                grid-area: textoIcono2; 
+            }
+        }
+        .icono3 {  
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 0.25fr 0.25fr 0.25fr;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas:
+            "fotoIcono3 fotoIcono3 fotoIcono3"
+            "fotoIcono3 fotoIcono3 fotoIcono3"
+            "textoIcono3 textoIcono3 textoIcono3";
+            grid-area: icono3;
+            justify-items: center;
+            .fotoIcono3 { 
+                grid-area: fotoIcono3; 
+            }
+            .textoIcono3 { 
+                grid-area: textoIcono3; 
+            }
+        }
+    }
+}
+
+/* Media Queries */
+/* Mobile */
+@media (max-width: 767px) {
+    .mainNosotros {  
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "imgNosotros imgNosotros imgNosotros"
+        "conocenos conocenos ."
+        ". icono1 ." 
+        ". icono2 ."
+        ". icono3 .";
+        grid-area: mainNosotros;
+        background-color: $color-fondo2;
+        justify-items: center;
+    }
+}

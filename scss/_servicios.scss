@@ -1,0 +1,150 @@
+/* Servicios (servicios.html)*/
+
+.gridContainerServicio {  
+    display: grid;
+    grid-template-columns: 0.3fr 2.7fr 0.3fr;
+    grid-template-rows: 0.2fr 2.3fr 0.5fr 0.6fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "headerContainer headerContainer headerContainer"
+    ". mainServicio ."
+    ". botonSeccion ."
+    "footerContainer footerContainer footerContainer";
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    .mainServicio {  
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1.2fr 0.2fr 0.3fr 0.3fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "imgServicio imgServicio imgServicio imgServicio"
+        ". tituloServicio tituloServicio ."
+        "card1Ser card1Ser card2Ser card2Ser"
+        "card3Ser card3Ser card4Ser card4Ser";
+        grid-area: mainServicio;
+        background-color: $color-fondo2;
+        .imgServicio { 
+            grid-area: imgServicio; 
+            .tituloEnImagen {
+                position: absolute;
+                top: 38%;
+                left: 50%;
+                background-color: $color-titulo;
+                border-radius: 40px;
+                transform: translate(-50%, -50%);
+            }
+            .fotoPresentacion {
+                height: 400px;
+                width: 100%;
+            }
+        }
+        .tituloServicio { 
+            grid-area: tituloServicio; 
+            text-align: center;
+            padding: 50px;
+            font-family: 'Kalam', cursive;
+            font-size: 20px;
+        }
+        .card1Ser {  
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1.6fr 0.4fr;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas:
+            "fotoSer fotoSer fotoSer"
+            "fotoSer fotoSer fotoSer"
+            "parrafo1Ser parrafo1Ser parrafo1Ser";
+            grid-area: card1Ser;
+            justify-items: center;
+            .fotoSer { 
+                grid-area: fotoSer; 
+            }
+            .parrafo1Ser { 
+                grid-area: parrafo1Ser; 
+            }
+        }
+        .card2Ser { 
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1.6fr 0.4fr;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas:
+            "foto2Ser foto2Ser foto2Ser"
+            "foto2Ser foto2Ser foto2Ser"
+            "parrafo2Ser parrafo2Ser parrafo2Ser";
+            grid-area: card2Ser;
+            justify-items: center;
+            .foto2Ser { 
+                grid-area: foto2Ser; 
+            }
+            .parrafo2Ser { 
+                grid-area: parrafo2Ser; 
+            }
+        }
+        .card3Ser { 
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1.6fr 0.4fr;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas:
+            "foto3Ser foto3Ser foto3Ser"
+            "foto3Ser foto3Ser foto3Ser"
+            "parrafo3Ser parrafo3Ser parrafo3Ser";
+            grid-area: card3Ser;
+            justify-items: center;
+            .foto3Ser { 
+                grid-area: foto3Ser; 
+            }
+            .parrafo3Ser { 
+                grid-area: parrafo3Ser; 
+            }
+        }
+        .card4Ser {  
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1.6fr 0.4fr;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas:
+            "foto4Ser foto4Ser foto4Ser"
+            "foto4Ser foto4Ser foto4Ser"
+            "parrafo4Ser parrafo4Ser parrafo4Ser";
+            grid-area: card4Ser;
+            justify-items: center;
+            .foto4Ser { 
+                grid-area: foto4Ser; 
+            }
+            .parrafo4Ser { 
+                grid-area: parrafo4Ser; 
+            }
+        }
+    }
+}
+
+/* Media Queries*/
+/* Tablet */
+@media (max-width: 1199px) {
+    
+    .mainServicio {  
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1.9fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "imgServicio imgServicio imgServicio imgServicio"
+        ". tituloServicio tituloServicio ."
+        ". card1Ser card1Ser ." 
+        ". card2Ser card2Ser ."
+        ". card3Ser card3Ser ." 
+        ". card4Ser card4Ser .";
+        grid-area: mainServicio;
+        background-color: $color-fondo2;
+    }
+}
