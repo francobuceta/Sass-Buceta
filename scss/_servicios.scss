@@ -66,13 +66,9 @@
             .parrafo1Ser { 
                 grid-area: parrafo1Ser; 
             }
-        }
+        }  /* Extend aplicado*/
         .card2Ser { 
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1.6fr 0.4fr;
-            gap: 0px 0px;
-            grid-auto-flow: row;
+            @extend .card1Ser;
             grid-template-areas:
             "foto2Ser foto2Ser foto2Ser"
             "foto2Ser foto2Ser foto2Ser"
@@ -87,11 +83,7 @@
             }
         }
         .card3Ser { 
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1.6fr 0.4fr;
-            gap: 0px 0px;
-            grid-auto-flow: row;
+            @extend .card1Ser;
             grid-template-areas:
             "foto3Ser foto3Ser foto3Ser"
             "foto3Ser foto3Ser foto3Ser"
@@ -106,11 +98,7 @@
             }
         }
         .card4Ser {  
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1.6fr 0.4fr;
-            gap: 0px 0px;
-            grid-auto-flow: row;
+            @extend .card1Ser;
             grid-template-areas:
             "foto4Ser foto4Ser foto4Ser"
             "foto4Ser foto4Ser foto4Ser"

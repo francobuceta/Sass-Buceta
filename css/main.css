@@ -4,7 +4,8 @@
   box-sizing: border-box; }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: 'Kalam', cursive; }
 
 /* Home (index.html)*/
@@ -151,6 +152,7 @@ header #botonMenu {
       grid-area: parrafo3; }
 
 /* Seccion Boton */
+/* Map aplicado */
 .botonSeccion {
   grid-area: botonSeccion;
   background-color: #dae5d0; }
@@ -158,12 +160,13 @@ header #botonMenu {
     display: flex;
     justify-content: center; }
     .botonSeccion .flex-boton .boton {
-      background-color: #376de3;
+      background-color: #2587b1;
       width: 100px;
       height: 50px;
       border-radius: 15px; }
 
 /* Footer */
+/* Mixin aplicado*/
 .footerContainer {
   grid-area: footerContainer;
   background-color: #fefbe7;
@@ -190,8 +193,23 @@ footer ul {
     text-decoration: none;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px; }
-    footer ul li a:hover {
-      background-color: #a0bcc2; }
+
+/* Map aplicado */
+i {
+  transition: transform 0.6s;
+  color: #6c6e70 !important; }
+
+.animacion--whatssap:hover {
+  color: #15a615 !important;
+  transform: scale(1.2); }
+
+.animacion--facebook:hover {
+  color: #257bb1 !important;
+  transform: scale(1.2); }
+
+.animacion--instagram:hover {
+  color: #dd2a7b !important;
+  transform: scale(1.2); }
 
 /* Media Queris */
 /* Home */
@@ -250,7 +268,8 @@ footer ul {
     grid-auto-flow: row;
     grid-template-areas: "imgServicio imgServicio imgServicio imgServicio" ". tituloServicio tituloServicio ." "card1Ser card1Ser card2Ser card2Ser" "card3Ser card3Ser card4Ser card4Ser";
     grid-area: mainServicio;
-    background-color: #dae5d0; }
+    background-color: #dae5d0;
+    /* Extend aplicado*/ }
     .gridContainerServicio .mainServicio .imgServicio {
       grid-area: imgServicio; }
       .gridContainerServicio .mainServicio .imgServicio .tituloEnImagen {
@@ -269,7 +288,7 @@ footer ul {
       padding: 50px;
       font-family: 'Kalam', cursive;
       font-size: 20px; }
-    .gridContainerServicio .mainServicio .card1Ser {
+    .gridContainerServicio .mainServicio .card1Ser, .gridContainerServicio .mainServicio .card2Ser, .gridContainerServicio .mainServicio .card3Ser, .gridContainerServicio .mainServicio .card4Ser {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1.6fr 0.4fr;
@@ -278,16 +297,11 @@ footer ul {
       grid-template-areas: "fotoSer fotoSer fotoSer" "fotoSer fotoSer fotoSer" "parrafo1Ser parrafo1Ser parrafo1Ser";
       grid-area: card1Ser;
       justify-items: center; }
-      .gridContainerServicio .mainServicio .card1Ser .fotoSer {
+      .gridContainerServicio .mainServicio .card1Ser .fotoSer, .gridContainerServicio .mainServicio .card2Ser .fotoSer, .gridContainerServicio .mainServicio .card3Ser .fotoSer, .gridContainerServicio .mainServicio .card4Ser .fotoSer {
         grid-area: fotoSer; }
-      .gridContainerServicio .mainServicio .card1Ser .parrafo1Ser {
+      .gridContainerServicio .mainServicio .card1Ser .parrafo1Ser, .gridContainerServicio .mainServicio .card2Ser .parrafo1Ser, .gridContainerServicio .mainServicio .card3Ser .parrafo1Ser, .gridContainerServicio .mainServicio .card4Ser .parrafo1Ser {
         grid-area: parrafo1Ser; }
     .gridContainerServicio .mainServicio .card2Ser {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1.6fr 0.4fr;
-      gap: 0px 0px;
-      grid-auto-flow: row;
       grid-template-areas: "foto2Ser foto2Ser foto2Ser" "foto2Ser foto2Ser foto2Ser" "parrafo2Ser parrafo2Ser parrafo2Ser";
       grid-area: card2Ser;
       justify-items: center; }
@@ -296,11 +310,6 @@ footer ul {
       .gridContainerServicio .mainServicio .card2Ser .parrafo2Ser {
         grid-area: parrafo2Ser; }
     .gridContainerServicio .mainServicio .card3Ser {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1.6fr 0.4fr;
-      gap: 0px 0px;
-      grid-auto-flow: row;
       grid-template-areas: "foto3Ser foto3Ser foto3Ser" "foto3Ser foto3Ser foto3Ser" "parrafo3Ser parrafo3Ser parrafo3Ser";
       grid-area: card3Ser;
       justify-items: center; }
@@ -309,11 +318,6 @@ footer ul {
       .gridContainerServicio .mainServicio .card3Ser .parrafo3Ser {
         grid-area: parrafo3Ser; }
     .gridContainerServicio .mainServicio .card4Ser {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1.6fr 0.4fr;
-      gap: 0px 0px;
-      grid-auto-flow: row;
       grid-template-areas: "foto4Ser foto4Ser foto4Ser" "foto4Ser foto4Ser foto4Ser" "parrafo4Ser parrafo4Ser parrafo4Ser";
       grid-area: card4Ser;
       justify-items: center; }

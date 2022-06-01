@@ -5,7 +5,8 @@
 }
 
 h1, 
-h2 {
+h2, 
+h3{
     font-family: 'Kalam', cursive;
 }
 
@@ -206,6 +207,14 @@ header {
 }
 
 /* Seccion Boton */
+/* Map aplicado */
+
+$btn: (
+    colorFondo: rgb(37, 135, 177),
+    ancho: 100px,
+    alto: 50px,
+    borde: 15px,
+);
 
 .botonSeccion {
     grid-area: botonSeccion;
@@ -214,23 +223,22 @@ header {
         display: flex;
         justify-content: center;
         .boton {
-            background-color: rgb(55, 109, 227);
-            width: 100px;
-            height: 50px;
-            border-radius: 15px;
+            background-color: map-get($btn, colorFondo);
+            width: map-get($btn, ancho);
+            height: map-get($btn, alto);
+            border-radius: map-get($btn, borde);
         }
     }
 }
 
 /* Footer */
+/* Mixin aplicado*/
 
 .footerContainer { 
     grid-area: footerContainer; 
     background-color: $color-fondo;
     padding: 6em;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    @include flex-between-wrap;
     .separador {
         margin: 5px;
         margin-right: auto;
@@ -256,13 +264,29 @@ footer {
                     text-decoration: none;
                     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
                     font-size: 20px;
-                    &:hover {
-                        background-color: $color-titulo;
-                    }
                 }
             }
         }       
 }
+
+/* Map aplicado */
+i {
+    transition: transform 0.6s;
+    color:rgb(108, 110, 112)!important;
+}
+
+$redes:(
+    whatssap: rgb(21, 166, 21),
+    facebook: rgb(37, 123, 177),
+    instagram: rgb(221,42,123),
+);
+
+@each $btn, $coloracion in $redes {
+    .animacion--#{$btn}:hover {
+        color: $coloracion !important;
+        transform: scale(1.2);
+    } 
+} 
 
 /* Media Queris */
 /* Home */
